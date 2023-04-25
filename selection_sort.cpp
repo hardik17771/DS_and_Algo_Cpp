@@ -12,3 +12,13 @@ void selectionSort(int arr[], int n) {
         swap(arr[min_idx], arr[i]);
     }
 }
+int arr[4]={1,6,2,12};
+
+int main(){
+    selectionSort(arr,4);
+    for(int i=0;i<4;++i)
+    {
+        cout<<arr[i]<<endl;
+    }
+    return 0;
+}
