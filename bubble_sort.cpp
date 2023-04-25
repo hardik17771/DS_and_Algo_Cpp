@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int arr[4]={1,6,2,12};
+
 
 void bubbleSort(int arr[], int n) {
     bool swapped;
@@ -16,6 +16,8 @@ void bubbleSort(int arr[], int n) {
             break;
     }
 }
+int arr[4]={1,6,2,12};
+
 int main(){
     bubbleSort(arr,4);
     for(int i=0;i<4;++i)

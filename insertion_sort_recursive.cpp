@@ -1,4 +1,5 @@
-
+#include<iostream>
+using namespace std;
 void insertionSortRecursive(int arr[], int n) {
     // Base case: if array size is 1 or less, it is already sorted
     if (n <= 1) {
@@ -18,4 +19,14 @@ void insertionSortRecursive(int arr[], int n) {
     }
 
     arr[j+1] = last;
+}
+int arr[4]={1,6,2,12};
+
+int main(){
+    insertionSortRecursive(arr,4);
+    for(int i=0;i<4;++i)
+    {
+        cout<<arr[i]<<endl;
+    }
+    return 0;
 }

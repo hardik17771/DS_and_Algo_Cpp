@@ -1,15 +1,5 @@
 #include<iostream>
 using namespace std;
-void heapSort(int arr[], int n) {
-    for (int i = n/2 - 1; i >= 0; i--) {
-        heapify(arr, n, i);
-    }
-    for (int i = n-1; i >= 0; i--) {
-        swap(arr[0], arr[i]);
-        heapify(arr, i, 0);
-    }
-}
-
 void heapify(int arr[], int n, int i) {
     int largest = i;
     int left = 2*i + 1;
@@ -26,4 +16,25 @@ void heapify(int arr[], int n, int i) {
         swap(arr[i], arr[largest]);
         heapify(arr, n, largest);
     }
+}
+void heapSort(int arr[], int n) {
+    for (int i = n/2 - 1; i >= 0; i--) {
+        heapify(arr, n, i);
+    }
+    for (int i = n-1; i >= 0; i--) {
+        swap(arr[0], arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+
+int arr[4]={1,6,2,12};
+
+int main(){
+    heapSort(arr,4);
+    for(int i=0;i<4;++i)
+    {
+        cout<<arr[i]<<endl;
+    }
+    return 0;
 }

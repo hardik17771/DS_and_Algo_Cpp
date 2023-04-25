@@ -12,3 +12,13 @@ void insertionSort(int arr[], int n) {
         arr[j+1] = key;
     }
 }
+int arr[4]={1,6,2,12};
+
+int main(){
+    insertionSort(arr,4);
+    for(int i=0;i<4;++i)
+    {
+        cout<<arr[i]<<endl;
+    }
+    return 0;
+}
